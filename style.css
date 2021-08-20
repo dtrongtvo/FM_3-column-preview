@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap");
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+}
+
+.container {
+  margin: 100px 0;
+  width: 70vw;
+  display: flex;
+  border-radius: 8px;
+  overflow: hidden;
+  color: hsl(0, 0%, 95%);
+}
+
+.item {
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item--sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.item--suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.item--luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.item h2 {
+  font-size: 36px;
+  margin: 32px 0;
+  letter-spacing: 1px;
+}
+
+.item p {
+  color: hsla(0, 0%, 100%, 0.75);
+  flex-grow: 1;
+  line-height: 1.8;
+  padding-bottom: 64px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 16px 24px;
+  border: 2px solid hsl(0, 0%, 95%);
+  border-radius: 100px;
+  background-color: hsl(0, 0%, 95%);
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+}
+
+.btn--sedans {
+  color: hsl(31, 77%, 52%);
+}
+
+.btn--suvs {
+  color: hsl(184, 100%, 22%);
+}
+
+.btn--luxury {
+  color: hsl(179, 100%, 13%);
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    padding: 32px;
+  }
+
+  .item h2 {
+    font-size: 30px;
+    margin: 24px 0;
+  }
+
+  .item p {
+    padding-bottom: 48px;
+    font-size: 12px;
+  }
+
+  .btn {
+    font-size: 12px;
+  }
+}
